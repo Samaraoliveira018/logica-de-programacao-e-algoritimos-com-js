@@ -12,13 +12,13 @@
     <form>
         <p>Nome:
             <input type="text" name="nome" id="nome">
-            <input type="submit" value="Mostrar">
+            <input type="submit" value="Mostrar" onclick="olaVoce()">
         </p>
 
     </form>
     <h3></h3>
 
-        <h1>Cine JS:Filme em Cartaz</h1>
+    <h1>Cine JS:Filme em Cartaz</h1>
     <form>
         <p>Título do filme
             <input type="text" name="titulo" id="inTitulo" required>
@@ -27,7 +27,7 @@
         <p>Duração (min)
             <input type="number" id="inDuracao" required>
         </p>
-        <input type="submit" value="Converter em Horas e Minutos">
+        <input type="submit" value="Converter em Horas e Minutos" onclick="converterHorasEminutos()">
     </form>
     <h3></h3>
     <h4></h4>
@@ -41,11 +41,43 @@
         <p>Preço:
             <input type="number" id="valor" required>
         </p>
-        <input type="submit" value="Ver promoção">
+        <input type="submit" value="Ver promoção" onclick="promoVeiculo()">
     </form>
     <h3 id="nomeDoCarro"></h3>
     <h3 id="entrada"></h3>
     <h3 id="parcelado"></h3>
+
+    <h1>Restaurante JS</h1>
+    <form>
+        <p>Buffet por Quilo:
+            <input type="number" min="0" step="0.01" name="titulo" id="buffetkl" required>
+        </p>
+
+        <p>Consumo do Cliente(gr):
+            <input type="number" id="consumo" min="0" required>
+        </p>
+        <input type="submit" value="Calcular preço" onclick="totalApagarRestaurante()">
+    </form>
+
+    <h3 id="valorTotal"></h3>
+
+    <h1>Farmácia JS</h1>
+    <form>
+        <p>Medicamento:
+            <input type="text" id="nomeMedic" required>
+        </p>
+
+        <p>Preço R$:
+            <input type="number" id="preco" min="0" step="0.01" required>
+        </p>
+        <input type="submit" value="Mostrar Promoção" onclick="promoFarmacia()">
+
+    </form>
+
+    <h3 id="titleRemed">
+    </h3>
+    <h3 id="valor"></h3>
+
     <script src="exerc_cap2.js"></script>
 </body>
 
