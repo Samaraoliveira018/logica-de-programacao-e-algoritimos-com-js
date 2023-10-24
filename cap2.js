@@ -85,3 +85,34 @@ formFarm.addEventListener('submit',(e) => {
     e.preventDefault();
 })
 }
+
+function pagamentoLanHouse(){
+    const formLanHouse = document.querySelector('form');
+    const valorTotal = document.querySelector('#valor');
+
+    formLanHouse.addEventListener('submit',(e) =>{
+        const quize = 15;
+        const tempoPor15min = formLanHouse.tempoPor15min.value;
+        const tempoUso = formLanHouse.tempo.value;
+        const totalGasto = Math.ceil(tempoUso/quize) * tempoPor15min;
+
+        valorTotal.innerText = `Valor a Pagar R$: ${totalGasto}`
+        e.preventDefault();
+    })
+}
+
+function descontoSupermercado(){
+    const formSuperm = document.querySelector('form');
+    const nameProduto = document.querySelector('#nameProduto')
+    const produtoDesconto = document.querySelector('#produtoDesconto');
+
+    formSuperm.addEventListener('submit',(e) =>{
+        const valorProduto = formSuperm.preco.value;
+        const valorProdutoDesconto = valorProduto * 0.5
+        const leve3 = (valorProduto * 0.5) + 2 * valorProduto
+
+        nameProduto.innerText = `${nameProduto} - Promoção:Leve 3 por R$: ${leve3.toFixed(2)}`
+        produtoDesconto.innerText = `O 3° produto custa apenas R$: ${valorProdutoDesconto.toFixed(2)} `
+        e.preventDefault();
+    })
+}
