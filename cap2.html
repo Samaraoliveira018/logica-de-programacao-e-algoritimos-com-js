@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <h1> Programa olá você</h1>
+   <h1> Programa olá você</h1>
     <form>
         <p>Nome:
             <input type="text" name="nome" id="nome">
@@ -77,6 +77,37 @@
     <h3 id="titleRemed">
     </h3>
     <h3 id="valor"></h3>
+
+   <h1>Lan House JS</h1>
+    <form>
+        <p>Valor por 15min de Uso R$:
+            <input type="number" id="tempoPor15min" required>
+        </p>
+
+        <p>Tempo de Uso do Cliente:
+            <input type="number" id="tempo" min="0" step="0.01" required>
+        </p>
+        <input type="submit" value="Calcular Valor a Pagar" onclick="pagamentoLanHouse()">
+
+    </form>
+
+    <h3 id="valor"></h3>
+
+    <h1>Supermercado JS</h1>
+    <form>
+        <p>Produto:
+            <input type="text" required id="nameProduto">
+        </p>
+
+        <p>Preço R$:
+            <input type="number" id="preco" min="0" step="0.01" required>
+        </p>
+        <input type="submit" value="Ver Promoção" onclick="descontoSupermercado()">
+
+    </form>
+
+    <h3 id="promocaoLeve3"></h3>
+    <h3 id="produtoDesconto"></h3>
 
     <script src="exerc_cap2.js"></script>
 </body>
