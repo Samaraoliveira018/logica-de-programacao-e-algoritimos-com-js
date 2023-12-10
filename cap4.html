@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+   <h1>Programa situação do Aluno</h1>
+    <form action="">
+        <p>Nome do Aluno:
+            <input type="text" name="nome" id="inNome" required="required">
+        </p>
+        <p>1ª Nota:
+            <input type="number" step="0.1" min="0" max="10" id="inNota1" required="required">
+        </p>
+        <p>2ª Nota:
+            <input type="number" step="0.1" min="0" max="10" id="inNota2" required="required">
+        </p>
+        <input type="submit" value="Exibir Média e Situação" onclick="situacaoDoAluno()">
+    </form>
+    <h3></h3>
+    <h4></h4>
+
+    <h1>Programa Cálculo do Peso Ideal</h1>
+    <form>
+        
+        <p>Nome:
+            <input type="text" name="nome" id="inNome" required="required">
+        </p>
+        <p>Sexo:
+            <input type="radio" name="sexo" id="inMasculino" required="required">Masculino
+            <input type="radio" name="sexo" id="inFeminino" required="required">Feminino
+        </p>
+        <p>Altura:
+            <input type="number" step="0.1" min="0" id="inAltura" required="required">
+        </p>
+        <input type="submit" value="Calcular Peso Ideal" onclick="calcPesoIdeal()">
+        <input type="reset" value="Limpar Campos" onclick="limparCampos()">
+    </form>
+    <h3></h3>
+    <script src="/cap_4/exe4.js"></script>
+</body>
+
+</html>
